@@ -13,7 +13,29 @@
 
     
     {{message}}
-    {{data}}
+<a href="{{path('personne_controllers')}}">Ajouter une personnes</a>
+{# <a href="/personne/add">Ajouter une personne</a> #}
+     {% for item in data %}
+          <ul>
+                <li>
+                    {% if item =='x' %}
+                            c'est x
+                        {% elseif item =='y'%}
+                            c'est y
+                        {% else %}
+                            c'est z
+                    {% endif %}   
+                </li>
+          </ul>
+     {% endfor %}
+         {{tabetudiant["nom"]}}
+         {{tabetudiant["prenom"]}}
+         {{tabetudiant["age"]}}
+         <br />
+   {{tabs.nom}}
+   {{tabs.prenomm}}
+   {{tabs.age}}
+     
     <ul>
         <li>Your controller at <code><a href="{{ 'C:/Users/USER/Desktop/workspace/apphopital/src/Controller/LeControlProduitController.php'|file_link(0) }}">src/Controller/LeControlProduitController.php</a></code></li>
         <li>Your template at <code><a href="{{ 'C:/Users/USER/Desktop/workspace/apphopital/templates/le_control_produit/index.html.twig'|file_link(0) }}">templates/le_control_produit/index.html.twig</a></code></li>
